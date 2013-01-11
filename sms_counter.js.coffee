@@ -3,9 +3,9 @@ window.SmsCounter = class SmsCounter
   @gsm7bitChars = "@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà"
   @gsm7bitExChar = "^{}\\[~]|€"
 
-  @gsm7bitRegExp = RegExp("^[#{RegExp.escape(@gsm7bitChars)}]*$")
-  @gsm7bitExRegExp = RegExp("^[#{RegExp.escape(@gsm7bitChars)}#{RegExp.escape(@gsm7bitExChar)}]*$")
-  @gsm7bitExOnlyRegExp = RegExp("^[\\#{RegExp.escape(@gsm7bitExChar)}]*$")
+  @gsm7bitRegExp = RegExp("^[#{(@gsm7bitChars)}]*$")
+  @gsm7bitExRegExp = RegExp("^[#{ (@gsm7bitChars)}#{(@gsm7bitExChar)}]*$")
+  @gsm7bitExOnlyRegExp = RegExp("^[\\#{(@gsm7bitExChar)}]*$")
 
   @GSM_7BIT = 'GSM_7BIT'
   @GSM_7BIT_EX = 'GSM_7BIT_EX'
@@ -47,7 +47,7 @@ window.SmsCounter = class SmsCounter
       else @UTF16
 
   @countGsm7bitEx: (text) ->
-    chars = (char for char in text when char.match(@gsm7bitExOnlyRegExp)?)
+    chars = (char2 for char2 in text when char2.match(@gsm7bitExOnlyRegExp)?)
     chars.length
 
 if jQuery?
@@ -55,11 +55,10 @@ if jQuery?
   $.fn.countSms = (target) ->
     input = @
     target = $(target)
-
     count_sms = ->
       count = SmsCounter.count(input.val())
       for k, v of count
         target.find(".#{k}").text(v)
 
-    @.on 'keyup.countSms', count_sms
+    @.on 'keyup', count_sms
     count_sms()
