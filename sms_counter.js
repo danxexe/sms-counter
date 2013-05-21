@@ -4,15 +4,15 @@ window.SmsCounter = SmsCounter = (function() {
 
   function SmsCounter() {}
 
-  SmsCounter.gsm7bitChars = "@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà";
+  SmsCounter.gsm7bitChars = "@£$¥èéùìòÇ\\nØø\\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !\\\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà";
 
-  SmsCounter.gsm7bitExChar = "^{}\\[~]|€";
+  SmsCounter.gsm7bitExChar = "\\^{}\\\\\\[~\\]|€";
 
   SmsCounter.gsm7bitRegExp = RegExp("^[" + SmsCounter.gsm7bitChars + "]*$");
 
   SmsCounter.gsm7bitExRegExp = RegExp("^[" + SmsCounter.gsm7bitChars + SmsCounter.gsm7bitExChar + "]*$");
 
-  SmsCounter.gsm7bitExOnlyRegExp = RegExp("^[\\" + SmsCounter.gsm7bitExChar + "]*$");
+  SmsCounter.gsm7bitExOnlyRegExp = RegExp("^[" + SmsCounter.gsm7bitExChar + "]*$");
 
   SmsCounter.GSM_7BIT = 'GSM_7BIT';
 
