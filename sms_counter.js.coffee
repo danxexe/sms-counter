@@ -1,7 +1,7 @@
 window.SmsCounter = class SmsCounter
 
-  @gsm7bitChars = "@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà"
-  @gsm7bitExChar = "^{}\\[~]|€"
+  @gsm7bitChars = "@£$¥èéùìòÇ\\nØø\\rÅåΔ_ΦΓΛΩΠΨΣΘΞÆæßÉ !\\\"#¤%&'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ§¿abcdefghijklmnopqrstuvwxyzäöñüà"
+  @gsm7bitExChar = "\\^{}\\\\\\[~\\]|€"
 
   @gsm7bitRegExp = RegExp("^[#{(@gsm7bitChars)}]*$")
   @gsm7bitExRegExp = RegExp("^[#{ (@gsm7bitChars)}#{(@gsm7bitExChar)}]*$")
