@@ -12,7 +12,7 @@ window.SmsCounter = SmsCounter = (function() {
 
   SmsCounter.gsm7bitExRegExp = RegExp("^[" + SmsCounter.gsm7bitChars + SmsCounter.gsm7bitExChar + "]*$");
 
-  SmsCounter.gsm7bitExOnlyRegExp = RegExp("^[" + SmsCounter.gsm7bitExChar + "]*$");
+  SmsCounter.gsm7bitExOnlyRegExp = RegExp("^[\\" + SmsCounter.gsm7bitExChar + "]*$");
 
   SmsCounter.GSM_7BIT = 'GSM_7BIT';
 
