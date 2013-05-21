@@ -55,4 +55,4 @@ TODO
 Known Issue
 ----
 
-- Detects wrong encoding, when a euro [&euro;] symbol stands at the beginning of the string.
+(none)
