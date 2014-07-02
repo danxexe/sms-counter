@@ -45,6 +45,9 @@
       }
       messages = Math.ceil(length / per_message);
       remaining = (per_message * messages) - length;
+      if(remaining == 0 && messages == 0){
+        remaining = per_message;
+      }
       return count = {
         encoding: encoding,
         length: length,
