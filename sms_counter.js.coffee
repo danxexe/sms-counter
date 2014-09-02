@@ -32,6 +32,7 @@ window.SmsCounter = class SmsCounter
 
     messages = Math.ceil(length / per_message)
     remaining = (per_message * messages) - length
+    remaining = per_message if (remaining == 0 && messages == 0)
 
     count =
       encoding: encoding
