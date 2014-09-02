@@ -58,6 +58,12 @@ Known Issue
 (none)
 
 
+Other Languages
+----
+
+- PHP: [https://github.com/acpmasquerade/sms-counter-php](https://github.com/acpmasquerade/sms-counter-php)
+
+
 ## License
 
 SMS Counter is released under the [MIT License](LICENSE.txt).
