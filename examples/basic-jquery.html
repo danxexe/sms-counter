@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>danxexe/sms-counter sample</title>
+</head>
+<body>
+
+	<textarea name="message" id="message" rows="5" cols="30"></textarea>
+	<ul id="sms-counter">
+		<li>Encoding: <span class="encoding"></span></li>
+		<li>Length: <span class="length"></span></li>
+		<li>Messages: <span class="messages"></span></li>
+		<li>Per Message: <span class="per_message"></span></li>
+		<li>Remaining: <span class="remaining"></span></li>
+	</ul>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="../sms_counter.min.js"></script>
+	<script>
+		$('#message').countSms('#sms-counter');
+	</script>
+
+</body>
+</html>
