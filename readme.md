@@ -62,6 +62,7 @@ Other Languages
 ----
 
 - PHP: [https://github.com/acpmasquerade/sms-counter-php](https://github.com/acpmasquerade/sms-counter-php)
+- C#: [https://github.com/troll31/sms-counter-csharp](https://github.com/troll31/sms-counter-csharp)
 
 
 ## License
